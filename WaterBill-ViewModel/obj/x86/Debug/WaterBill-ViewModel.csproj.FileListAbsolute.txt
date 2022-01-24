@@ -1,0 +1,4 @@
+I:\WaterBill\WaterBill-ViewModel\bin\x86\Debug\WaterBill-ViewModel.dll
+I:\WaterBill\WaterBill-ViewModel\bin\x86\Debug\WaterBill-ViewModel.pdb
+I:\WaterBill\WaterBill-ViewModel\obj\x86\Debug\WaterBill-ViewModel.dll
+I:\WaterBill\WaterBill-ViewModel\obj\x86\Debug\WaterBill-ViewModel.pdb

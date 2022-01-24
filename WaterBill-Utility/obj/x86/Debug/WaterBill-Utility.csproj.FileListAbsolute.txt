@@ -1,0 +1,4 @@
+I:\WaterBill\WaterBill-Utility\bin\x86\Debug\WaterBill-Utility.dll
+I:\WaterBill\WaterBill-Utility\bin\x86\Debug\WaterBill-Utility.pdb
+I:\WaterBill\WaterBill-Utility\obj\x86\Debug\WaterBill-Utility.dll
+I:\WaterBill\WaterBill-Utility\obj\x86\Debug\WaterBill-Utility.pdb

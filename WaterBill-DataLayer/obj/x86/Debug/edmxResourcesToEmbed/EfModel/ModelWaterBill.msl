@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbWaterBillModelStoreContainer" CdmEntityContainer="DbWaterBillEntities">
+    <EntitySetMapping Name="Tb_Company">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Company">
+        <MappingFragment StoreEntitySet="Tb_Company">
+          <ScalarProperty Name="SubscribId" ColumnName="SubscribId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="PelakId" ColumnName="PelakId" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Login">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Login">
+        <MappingFragment StoreEntitySet="Tb_Login">
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_OptionsFirst">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_OptionsFirst">
+        <MappingFragment StoreEntitySet="Tb_OptionsFirst">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Abunman" ColumnName="Abunman" />
+          <ScalarProperty Name="PublicService" ColumnName="PublicService" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Consumption" ColumnName="Consumption" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

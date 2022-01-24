@@ -1,0 +1,5 @@
+I:\WaterBill\WaterBill-Business\bin\x86\Debug\WaterBill-Business.dll
+I:\WaterBill\WaterBill-Business\bin\x86\Debug\WaterBill-Business.pdb
+I:\WaterBill\WaterBill-Business\obj\x86\Debug\WaterBill-Business.csprojResolveAssemblyReference.cache
+I:\WaterBill\WaterBill-Business\obj\x86\Debug\WaterBill-Business.dll
+I:\WaterBill\WaterBill-Business\obj\x86\Debug\WaterBill-Business.pdb

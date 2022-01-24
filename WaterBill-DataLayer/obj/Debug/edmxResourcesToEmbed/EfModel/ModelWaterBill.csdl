@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbWaterBillModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DbWaterBillEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tb_Bill" EntityType="DbWaterBillModel.Tb_Bill" />
+    <EntitySet Name="Tb_Calculate" EntityType="DbWaterBillModel.Tb_Calculate" />
+    <EntitySet Name="Tb_Login" EntityType="DbWaterBillModel.Tb_Login" />
+    <EntitySet Name="NerkhMasraf" EntityType="DbWaterBillModel.NerkhMasraf" />
+    <EntitySet Name="Tb_Receipt" EntityType="DbWaterBillModel.Tb_Receipt" />
+    <AssociationSet Name="FK_Tb_Receipt_0_0" Association="DbWaterBillModel.FK_Tb_Receipt_0_0">
+      <End Role="Tb_Bill" EntitySet="Tb_Bill" />
+      <End Role="Tb_Receipt" EntitySet="Tb_Receipt" />
+    </AssociationSet>
+    <EntitySet Name="Tb_Debt" EntityType="DbWaterBillModel.Tb_Debt" />
+    <EntitySet Name="Tb_CountBill" EntityType="DbWaterBillModel.Tb_CountBill" />
+    <EntitySet Name="Tb_Company" EntityType="DbWaterBillModel.Tb_Company" />
+    <AssociationSet Name="FK_Tb_Bill_0_01" Association="DbWaterBillModel.FK_Tb_Bill_0_01">
+      <End Role="Tb_Company1" EntitySet="Tb_Company" />
+      <End Role="Tb_Bill" EntitySet="Tb_Bill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Calculate_0_01" Association="DbWaterBillModel.FK_Tb_Calculate_0_01">
+      <End Role="Tb_Company1" EntitySet="Tb_Company" />
+      <End Role="Tb_Calculate" EntitySet="Tb_Calculate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Debt_0_01" Association="DbWaterBillModel.FK_Tb_Debt_0_01">
+      <End Role="Tb_Company1" EntitySet="Tb_Company" />
+      <End Role="Tb_Debt" EntitySet="Tb_Debt" />
+    </AssociationSet>
+    <EntitySet Name="Tb_FirstOptions" EntityType="DbWaterBillModel.Tb_FirstOptions" />
+    <EntitySet Name="Tb_Receipt_calc" EntityType="DbWaterBillModel.Tb_Receipt_calc" />
+    <EntitySet Name="Tb_PanelSms" EntityType="DbWaterBillModel.Tb_PanelSms" />
+    <EntitySet Name="Tb_OptionsSms" EntityType="DbWaterBillModel.Tb_OptionsSms" />
+  </EntityContainer>
+  <EntityType Name="Tb_Bill">
+    <Key>
+      <PropertyRef Name="BillId" />
+    </Key>
+    <Property Name="BillId" Type="Int32" Nullable="false" />
+    <Property Name="SeenDate" Type="DateTime" Nullable="false" />
+    <Property Name="Describtion" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="SubScribCode" Type="Int32" Nullable="false" />
+    <Property Name="MeterNumberPast" Type="Double" Nullable="false" />
+    <Property Name="MeterNumberNow" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Tb_Receipt" Relationship="DbWaterBillModel.FK_Tb_Receipt_0_0" FromRole="Tb_Bill" ToRole="Tb_Receipt" />
+    <Property Name="NameCompany" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="SeenDateShamsi" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="PelackNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Company1" Relationship="DbWaterBillModel.FK_Tb_Bill_0_01" FromRole="Tb_Bill" ToRole="Tb_Company1" />
+  </EntityType>
+  <EntityType Name="Tb_Calculate">
+    <Key>
+      <PropertyRef Name="CalculateId" />
+    </Key>
+    <Property Name="CalculateId" Type="Int32" Nullable="false" />
+    <Property Name="Bedehi" Type="Double" Nullable="false" />
+    <Property Name="Bestankar" Type="Double" Nullable="false" />
+    <Property Name="UnitPay" Type="Double" Nullable="false" />
+    <Property Name="SumMaliat" Type="Double" Nullable="false" />
+    <Property Name="SumTotal" Type="Double" Nullable="false" />
+    <Property Name="SubscribCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Company1" Relationship="DbWaterBillModel.FK_Tb_Calculate_0_01" FromRole="Tb_Calculate" ToRole="Tb_Company1" />
+  </EntityType>
+  <EntityType Name="Tb_Login">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NerkhMasraf">
+    <Key>
+      <PropertyRef Name="TypeName" />
+    </Key>
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="false" />
+    <Property Name="Curency" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Receipt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Double" Nullable="false" />
+    <Property Name="SubaScribId" Type="Int32" Nullable="false" />
+    <Property Name="PelakNumber" Type="Int32" Nullable="false" />
+    <Property Name="SubName" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="DatePast" Type="DateTime" Nullable="false" />
+    <Property Name="DateNow" Type="DateTime" Nullable="false" />
+    <Property Name="MeterPast" Type="Double" Nullable="false" />
+    <Property Name="MeterNow" Type="Double" Nullable="false" />
+    <Property Name="AmountLevel" Type="Int32" Nullable="false" />
+    <Property Name="LeterCurency" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="NumberCurency" Type="Double" Nullable="false" />
+    <Property Name="Abounman" Type="Double" />
+    <Property Name="Penalty" Type="String" />
+    <Property Name="Maliat" Type="Double" />
+    <Property Name="PublicWork" Type="Double" Nullable="false" />
+    <Property Name="CurencyPay" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Ghotre" Type="Double" Nullable="false" />
+    <Property Name="DeadlineCurency" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="HesabNumber" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Debt" Type="Double" />
+    <NavigationProperty Name="Tb_Bill" Relationship="DbWaterBillModel.FK_Tb_Receipt_0_0" FromRole="Tb_Receipt" ToRole="Tb_Bill" />
+    <Property Name="Curency" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="DateShamsi" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Bestan" Type="Double" Nullable="false" />
+    <Property Name="CurencyinDore" Type="Double" Nullable="false" />
+    <Property Name="FatherName" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Shenasname" Type="Int32" Nullable="false" />
+    <Property Name="Adress" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="codemeli" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="pay2" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="pay3" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Tb_Receipt_0_0">
+    <End Type="DbWaterBillModel.Tb_Bill" Role="Tb_Bill" Multiplicity="1" />
+    <End Type="DbWaterBillModel.Tb_Receipt" Role="Tb_Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Bill">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="Tb_Receipt">
+        <PropertyRef Name="SubaScribId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tb_Debt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Debt" Type="Double" />
+    <Property Name="Best" Type="Double" />
+    <NavigationProperty Name="Tb_Company1" Relationship="DbWaterBillModel.FK_Tb_Debt_0_01" FromRole="Tb_Debt" ToRole="Tb_Company1" />
+  </EntityType>
+  <EntityType Name="Tb_CountBill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" />
+    <Property Name="Count" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Company">
+    <Key>
+      <PropertyRef Name="SubscribId" />
+    </Key>
+    <Property Name="SubscribId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PelakId" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Addres" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TypePublicService" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="FatherName" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Shenasname" Type="Int32" Nullable="false" />
+    <Property Name="Codemeli" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tb_Bill" Relationship="DbWaterBillModel.FK_Tb_Bill_0_01" FromRole="Tb_Company1" ToRole="Tb_Bill" />
+    <NavigationProperty Name="Tb_Calculate" Relationship="DbWaterBillModel.FK_Tb_Calculate_0_01" FromRole="Tb_Company1" ToRole="Tb_Calculate" />
+    <NavigationProperty Name="Tb_Debt" Relationship="DbWaterBillModel.FK_Tb_Debt_0_01" FromRole="Tb_Company1" ToRole="Tb_Debt" />
+  </EntityType>
+  <Association Name="FK_Tb_Bill_0_01">
+    <End Type="DbWaterBillModel.Tb_Company" Role="Tb_Company1" Multiplicity="1" />
+    <End Type="DbWaterBillModel.Tb_Bill" Role="Tb_Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Company1">
+        <PropertyRef Name="SubscribId" />
+      </Principal>
+      <Dependent Role="Tb_Bill">
+        <PropertyRef Name="SubScribCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Calculate_0_01">
+    <End Type="DbWaterBillModel.Tb_Company" Role="Tb_Company1" Multiplicity="1" />
+    <End Type="DbWaterBillModel.Tb_Calculate" Role="Tb_Calculate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Company1">
+        <PropertyRef Name="SubscribId" />
+      </Principal>
+      <Dependent Role="Tb_Calculate">
+        <PropertyRef Name="SubscribCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Debt_0_01">
+    <End Type="DbWaterBillModel.Tb_Company" Role="Tb_Company1" Multiplicity="1" />
+    <End Type="DbWaterBillModel.Tb_Debt" Role="Tb_Debt" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Company1">
+        <PropertyRef Name="SubscribId" />
+      </Principal>
+      <Dependent Role="Tb_Debt">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tb_FirstOptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" />
+    <Property Name="Abunman" Type="Double" Nullable="false" />
+    <Property Name="Maliat" Type="Double" Nullable="false" />
+    <Property Name="PublicWork" Type="Double" Nullable="false" />
+    <Property Name="GhotreEnsheab" Type="Double" Nullable="false" />
+    <Property Name="CurencuOfUnit" Type="Double" Nullable="false" />
+    <Property Name="CurencuOfUnitToUp" Type="Double" Nullable="false" />
+    <Property Name="HesabPhone" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tb_Receipt_calc">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="bedehi" Type="Int32" />
+    <Property Name="paradakhti" Type="Int32" />
+    <Property Name="datesabt" Type="DateTime" />
+    <Property Name="type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tb_PanelSms">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCustomer" Type="Int32" />
+    <Property Name="NameCustomer" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="DateSms" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Tb_OptionsSms">
+    <Key>
+      <PropertyRef Name="key" />
+    </Key>
+    <Property Name="key" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MatnSms" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Isflag" Type="Boolean" />
+  </EntityType>
+</Schema>

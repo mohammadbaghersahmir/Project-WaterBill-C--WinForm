@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbWaterBillModelStoreContainer" CdmEntityContainer="DbWaterBillEntities">
+    <EntitySetMapping Name="Tb_Bill">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Bill">
+        <MappingFragment StoreEntitySet="Tb_Bill">
+          <ScalarProperty Name="PelackNumber" ColumnName="PelackNumber" />
+          <ScalarProperty Name="SeenDateShamsi" ColumnName="SeenDateShamsi" />
+          <ScalarProperty Name="NameCompany" ColumnName="NameCompany" />
+          <ScalarProperty Name="MeterNumberNow" ColumnName="MeterNumberNow" />
+          <ScalarProperty Name="MeterNumberPast" ColumnName="MeterNumberPast" />
+          <ScalarProperty Name="SubScribCode" ColumnName="SubScribCode" />
+          <ScalarProperty Name="Describtion" ColumnName="Describtion" />
+          <ScalarProperty Name="SeenDate" ColumnName="SeenDate" />
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Calculate">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Calculate">
+        <MappingFragment StoreEntitySet="Tb_Calculate">
+          <ScalarProperty Name="SubscribCode" ColumnName="SubscribCode" />
+          <ScalarProperty Name="SumTotal" ColumnName="SumTotal" />
+          <ScalarProperty Name="SumMaliat" ColumnName="SumMaliat" />
+          <ScalarProperty Name="UnitPay" ColumnName="UnitPay" />
+          <ScalarProperty Name="Bestankar" ColumnName="Bestankar" />
+          <ScalarProperty Name="Bedehi" ColumnName="Bedehi" />
+          <ScalarProperty Name="CalculateId" ColumnName="CalculateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Login">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Login">
+        <MappingFragment StoreEntitySet="Tb_Login">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NerkhMasraf">
+      <EntityTypeMapping TypeName="DbWaterBillModel.NerkhMasraf">
+        <MappingFragment StoreEntitySet="NerkhMasraf">
+          <ScalarProperty Name="Curency" ColumnName="Curency" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Receipt">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Receipt">
+        <MappingFragment StoreEntitySet="Tb_Receipt">
+          <ScalarProperty Name="pay3" ColumnName="pay3" />
+          <ScalarProperty Name="pay2" ColumnName="pay2" />
+          <ScalarProperty Name="codemeli" ColumnName="codemeli" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Shenasname" ColumnName="Shenasname" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="CurencyinDore" ColumnName="CurencyinDore" />
+          <ScalarProperty Name="Bestan" ColumnName="Bestan" />
+          <ScalarProperty Name="DateShamsi" ColumnName="DateShamsi" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Curency" ColumnName="Curency" />
+          <ScalarProperty Name="Debt" ColumnName="Debt" />
+          <ScalarProperty Name="HesabNumber" ColumnName="HesabNumber" />
+          <ScalarProperty Name="DeadlineCurency" ColumnName="DeadlineCurency" />
+          <ScalarProperty Name="Ghotre" ColumnName="Ghotre" />
+          <ScalarProperty Name="CurencyPay" ColumnName="CurencyPay" />
+          <ScalarProperty Name="PublicWork" ColumnName="PublicWork" />
+          <ScalarProperty Name="Maliat" ColumnName="Maliat" />
+          <ScalarProperty Name="Penalty" ColumnName="Penalty" />
+          <ScalarProperty Name="Abounman" ColumnName="Abounman" />
+          <ScalarProperty Name="NumberCurency" ColumnName="NumberCurency" />
+          <ScalarProperty Name="LeterCurency" ColumnName="LeterCurency" />
+          <ScalarProperty Name="AmountLevel" ColumnName="AmountLevel" />
+          <ScalarProperty Name="MeterNow" ColumnName="MeterNow" />
+          <ScalarProperty Name="MeterPast" ColumnName="MeterPast" />
+          <ScalarProperty Name="DateNow" ColumnName="DateNow" />
+          <ScalarProperty Name="DatePast" ColumnName="DatePast" />
+          <ScalarProperty Name="SubName" ColumnName="SubName" />
+          <ScalarProperty Name="PelakNumber" ColumnName="PelakNumber" />
+          <ScalarProperty Name="SubaScribId" ColumnName="SubaScribId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Debt">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Debt">
+        <MappingFragment StoreEntitySet="Tb_Debt">
+          <ScalarProperty Name="Best" ColumnName="Best" />
+          <ScalarProperty Name="Debt" ColumnName="Debt" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_CountBill">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_CountBill">
+        <MappingFragment StoreEntitySet="Tb_CountBill">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Company">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Company">
+        <MappingFragment StoreEntitySet="Tb_Company">
+          <ScalarProperty Name="Codemeli" ColumnName="Codemeli" />
+          <ScalarProperty Name="Shenasname" ColumnName="Shenasname" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="TypePublicService" ColumnName="TypePublicService" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PelakId" ColumnName="PelakId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="SubscribId" ColumnName="SubscribId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_FirstOptions">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_FirstOptions">
+        <MappingFragment StoreEntitySet="Tb_FirstOptions">
+          <ScalarProperty Name="HesabPhone" ColumnName="HesabPhone" />
+          <ScalarProperty Name="CurencuOfUnitToUp" ColumnName="CurencuOfUnitToUp" />
+          <ScalarProperty Name="CurencuOfUnit" ColumnName="CurencuOfUnit" />
+          <ScalarProperty Name="GhotreEnsheab" ColumnName="GhotreEnsheab" />
+          <ScalarProperty Name="PublicWork" ColumnName="PublicWork" />
+          <ScalarProperty Name="Maliat" ColumnName="Maliat" />
+          <ScalarProperty Name="Abunman" ColumnName="Abunman" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Receipt_calc">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_Receipt_calc">
+        <MappingFragment StoreEntitySet="Tb_Receipt_calc">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="datesabt" ColumnName="datesabt" />
+          <ScalarProperty Name="paradakhti" ColumnName="paradakhti" />
+          <ScalarProperty Name="bedehi" ColumnName="bedehi" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_PanelSms">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_PanelSms">
+        <MappingFragment StoreEntitySet="Tb_PanelSms">
+          <ScalarProperty Name="DateSms" ColumnName="DateSms" />
+          <ScalarProperty Name="NameCustomer" ColumnName="NameCustomer" />
+          <ScalarProperty Name="IdCustomer" ColumnName="IdCustomer" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_OptionsSms">
+      <EntityTypeMapping TypeName="DbWaterBillModel.Tb_OptionsSms">
+        <MappingFragment StoreEntitySet="Tb_OptionsSms">
+          <ScalarProperty Name="Isflag" ColumnName="Isflag" />
+          <ScalarProperty Name="MatnSms" ColumnName="MatnSms" />
+          <ScalarProperty Name="key" ColumnName="key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

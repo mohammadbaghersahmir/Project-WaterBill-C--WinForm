@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbWaterBillModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=I:\WaterBill\WaterBill-DataLayer\bin\Debug\DbWaterBill.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tb_Company">
+    <Key>
+      <PropertyRef Name="SubscribId" />
+    </Key>
+    <Property Name="SubscribId" Type="int" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PelakId" Type="tinyint" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="13" />
+    <Property Name="Addres" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tb_Login">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_OptionsFirst">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Abunman" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="PublicService" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Taxes" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Consumption" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="13" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DbWaterBillModelStoreContainer">
+    <EntitySet Name="Tb_Company" EntityType="Self.Tb_Company" store:Type="Tables" />
+    <EntitySet Name="Tb_Login" EntityType="Self.Tb_Login" store:Type="Tables" />
+    <EntitySet Name="Tb_OptionsFirst" EntityType="Self.Tb_OptionsFirst" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

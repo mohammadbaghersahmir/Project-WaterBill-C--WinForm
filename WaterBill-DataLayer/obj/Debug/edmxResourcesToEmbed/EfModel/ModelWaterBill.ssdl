@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbWaterBillModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=E:\WaterBill\WaterBill\bin\Debug\DbWaterBill.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NerkhMasraf">
+    <Key>
+      <PropertyRef Name="TypeName" />
+    </Key>
+    <Property Name="TypeName" Type="varchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Curency" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Bill">
+    <Key>
+      <PropertyRef Name="BillId" />
+    </Key>
+    <Property Name="BillId" Type="int" Nullable="false" />
+    <Property Name="SeenDate" Type="datetime" Nullable="false" />
+    <Property Name="Describtion" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="SubScribCode" Type="int" Nullable="false" />
+    <Property Name="MeterNumberPast" Type="real" Nullable="false" />
+    <Property Name="MeterNumberNow" Type="real" Nullable="false" />
+    <Property Name="NameCompany" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="SeenDateShamsi" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="PelackNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Calculate">
+    <Key>
+      <PropertyRef Name="CalculateId" />
+    </Key>
+    <Property Name="CalculateId" Type="int" Nullable="false" />
+    <Property Name="Bedehi" Type="real" Nullable="false" />
+    <Property Name="Bestankar" Type="real" Nullable="false" />
+    <Property Name="UnitPay" Type="real" Nullable="false" />
+    <Property Name="SumMaliat" Type="real" Nullable="false" />
+    <Property Name="SumTotal" Type="real" Nullable="false" />
+    <Property Name="SubscribCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Company">
+    <Key>
+      <PropertyRef Name="SubscribId" />
+    </Key>
+    <Property Name="SubscribId" Type="int" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PelakId" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Addres" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="TypePublicService" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Shenasname" Type="int" Nullable="false" />
+    <Property Name="Codemeli" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_CountBill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Count" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Debt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Debt" Type="real" />
+    <Property Name="Best" Type="real" />
+  </EntityType>
+  <EntityType Name="Tb_FirstOptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" Nullable="false" />
+    <Property Name="Abunman" Type="real" Nullable="false" />
+    <Property Name="Maliat" Type="real" Nullable="false" />
+    <Property Name="PublicWork" Type="real" Nullable="false" />
+    <Property Name="GhotreEnsheab" Type="real" Nullable="false" />
+    <Property Name="CurencuOfUnit" Type="real" Nullable="false" />
+    <Property Name="CurencuOfUnitToUp" Type="real" Nullable="false" />
+    <Property Name="HesabPhone" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Login">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_OptionsSms">
+    <Key>
+      <PropertyRef Name="key" />
+    </Key>
+    <Property Name="key" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MatnSms" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="Isflag" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tb_PanelSms">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCustomer" Type="int" />
+    <Property Name="NameCustomer" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="DateSms" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_Receipt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="real" Nullable="false" />
+    <Property Name="SubaScribId" Type="int" Nullable="false" />
+    <Property Name="PelakNumber" Type="int" Nullable="false" />
+    <Property Name="SubName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="DatePast" Type="datetime" Nullable="false" />
+    <Property Name="DateNow" Type="datetime" Nullable="false" />
+    <Property Name="MeterPast" Type="real" Nullable="false" />
+    <Property Name="MeterNow" Type="real" Nullable="false" />
+    <Property Name="AmountLevel" Type="int" Nullable="false" />
+    <Property Name="LeterCurency" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="NumberCurency" Type="real" Nullable="false" />
+    <Property Name="Abounman" Type="real" />
+    <Property Name="Penalty" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="Maliat" Type="real" />
+    <Property Name="PublicWork" Type="real" Nullable="false" />
+    <Property Name="CurencyPay" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Ghotre" Type="real" Nullable="false" />
+    <Property Name="DeadlineCurency" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="HesabNumber" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Debt" Type="real" />
+    <Property Name="Curency" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="DateShamsi" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Bestan" Type="real" Nullable="false" />
+    <Property Name="CurencyinDore" Type="real" Nullable="false" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Shenasname" Type="int" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="codemeli" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="pay2" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="pay3" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <EntityType Name="Tb_Receipt_calc">
+    <Key>
+      <PropertyRef Name="Key" />
+    </Key>
+    <Property Name="Key" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="bedehi" Type="int" />
+    <Property Name="paradakhti" Type="int" />
+    <Property Name="datesabt" Type="datetime" />
+    <Property Name="type" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <Association Name="FK_Tb_Calculate_0_0">
+    <End Role="Tb_Company" Type="Self.Tb_Company" Multiplicity="1" />
+    <End Role="Tb_Calculate" Type="Self.Tb_Calculate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Company">
+        <PropertyRef Name="SubscribId" />
+      </Principal>
+      <Dependent Role="Tb_Calculate">
+        <PropertyRef Name="SubscribCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Tb_Company_0_0' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Tb_Company_0_0" />-->
+  <Association Name="FK_Tb_Debt_0_0">
+    <End Role="Tb_Company" Type="Self.Tb_Company" Multiplicity="1" />
+    <End Role="Tb_Debt" Type="Self.Tb_Debt" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Company">
+        <PropertyRef Name="SubscribId" />
+      </Principal>
+      <Dependent Role="Tb_Debt">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Receipt_0_0">
+    <End Role="Tb_Bill" Type="Self.Tb_Bill" Multiplicity="1" />
+    <End Role="Tb_Receipt" Type="Self.Tb_Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Bill">
+        <PropertyRef Name="BillId" />
+      </Principal>
+      <Dependent Role="Tb_Receipt">
+        <PropertyRef Name="SubaScribId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbWaterBillModelStoreContainer">
+    <EntitySet Name="NerkhMasraf" EntityType="Self.NerkhMasraf" store:Type="Tables" />
+    <EntitySet Name="Tb_Bill" EntityType="Self.Tb_Bill" store:Type="Tables" />
+    <EntitySet Name="Tb_Calculate" EntityType="Self.Tb_Calculate" store:Type="Tables" />
+    <EntitySet Name="Tb_Company" EntityType="Self.Tb_Company" store:Type="Tables" />
+    <EntitySet Name="Tb_CountBill" EntityType="Self.Tb_CountBill" store:Type="Tables" />
+    <EntitySet Name="Tb_Debt" EntityType="Self.Tb_Debt" store:Type="Tables" />
+    <EntitySet Name="Tb_FirstOptions" EntityType="Self.Tb_FirstOptions" store:Type="Tables" />
+    <EntitySet Name="Tb_Login" EntityType="Self.Tb_Login" store:Type="Tables" />
+    <EntitySet Name="Tb_OptionsSms" EntityType="Self.Tb_OptionsSms" store:Type="Tables" />
+    <EntitySet Name="Tb_PanelSms" EntityType="Self.Tb_PanelSms" store:Type="Tables" />
+    <EntitySet Name="Tb_Receipt" EntityType="Self.Tb_Receipt" store:Type="Tables" />
+    <EntitySet Name="Tb_Receipt_calc" EntityType="Self.Tb_Receipt_calc" store:Type="Tables" />
+    <AssociationSet Name="FK_Tb_Calculate_0_0" Association="Self.FK_Tb_Calculate_0_0">
+      <End Role="Tb_Company" EntitySet="Tb_Company" />
+      <End Role="Tb_Calculate" EntitySet="Tb_Calculate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Debt_0_0" Association="Self.FK_Tb_Debt_0_0">
+      <End Role="Tb_Company" EntitySet="Tb_Company" />
+      <End Role="Tb_Debt" EntitySet="Tb_Debt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Receipt_0_0" Association="Self.FK_Tb_Receipt_0_0">
+      <End Role="Tb_Bill" EntitySet="Tb_Bill" />
+      <End Role="Tb_Receipt" EntitySet="Tb_Receipt" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
